@@ -1,0 +1,173 @@
+<app-barra-navegacao></app-barra-navegacao>
+<div class="container-menu">
+  <a class="menu" mat-icon-button (click)="sair()">
+    Sair
+    <mat-icon class="icone">logout</mat-icon>
+  </a>
+</div>
+<div class="espaco-topo"></div>
+<mat-card class="container-form margem-topo mat-elevation-z8 desempenho">
+  <mat-card-header>
+    <mat-card-title>Desempenho</mat-card-title>
+    <mat-card-subtitle>Acompanhe seu progresso</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Numero de redações enviadas</p>
+    <p>Nota Média nas Redações</p>
+
+    <p>Numero de questoes resolvidas</p>
+    <p>Numero de acertos</p>
+    <p>Numero de erros</p>
+
+    <p>Evolução</p>
+    <p>Pontuação Final</p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="container-form mat-elevation-z8">
+  <mat-card-header>
+    <mat-card-title>Exercícios</mat-card-title>
+    <mat-card-subtitle>Questões objetivas para fixação</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="example-container">
+      <h4>Critérios de busca</h4>
+      <mat-form-field>
+        <mat-label>Matéria</mat-label>
+        <mat-select matNativeControl #materiaSelecionada>
+          <ul>
+            <ng-template #recursiveList let-padraoMaterias>
+              <li *ngFor="let elemento of padraoMaterias">
+                  <mat-option value="{{elemento.topico}}">{{elemento.topico}}</mat-option>
+                <ul *ngIf="elemento.subtopico.length > 0">
+                  <ng-container *ngTemplateOutlet="recursiveList; context: { $implicit: elemento.subtopico }"></ng-container>
+                </ul>
+              </li>
+            </ng-template>
+            <ng-container *ngTemplateOutlet="recursiveList; context: { $implicit: padraoMaterias }"></ng-container>
+          </ul>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Banca examinadora</mat-label>
+        <mat-select matNativeControl #bancaSelecionada>
+          <mat-option value="{{banca}}" *ngFor="let banca of padraoBancas">{{banca}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Concurso</mat-label>
+        <mat-select matNativeControl #concursoSelecionado>
+          <div *ngFor="let concurso of padraoConcursos">
+            <mat-option value="{{concurso}}">{{concurso}}</mat-option>
+          </div>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="number" #anoSelecionado placeholder="Ano" value="2019" min="2000" max="{{anoAtual}}">
+      </mat-form-field>
+    </div>
+    
+    <div class="container-botao-padrao">
+      <button mat-raised-button class="botao" (click)="buscarEApresentarExercicios(materiaSelecionada.value, bancaSelecionada.value, concursoSelecionado.value, anoSelecionado.value)">Buscar</button>
+    </div>
+    <div *ngIf="qtdeExercicios > 0">
+      <p class="resultado-busca">{{qtdeExercicios}} questões disponíveis</p>
+    </div>
+    <div *ngFor="let exercicio of exercicios" class="botoes-exercicios">
+      <button mat-raised-button class="botao" (click)="buscarDadosExercicio(exercicio.id)">{{exercicios.indexOf(exercicio)+1}}</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<div class="oculta" id="painel-exercicios">
+  <mat-card class="container-form mat-elevation-z8">
+    <mat-card-header>
+      <mat-card-title>Questão</mat-card-title>
+      <mat-card-subtitle id="frase-motivacional" class="transicao-motivacional">{{frase}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="pontuacao">{{exercicioCompleto.pontuacao}} pontos</p>
+      <div class="enunciado">
+        <p>{{exercicioCompleto.enunciado1}}</p>
+        <div *ngIf="exercicioCompleto.imagemEnunciado!=null">
+          <img id="imagem-exercicio" class="img-enunciado" [src]="exercicioCompleto.imagemEnunciado">
+        </div>
+        <p>{{exercicioCompleto.enunciado2}}</p>
+      </div>
+      <mat-radio-group class="example-radio-group" [(ngModel)]="respostaAssinalada">
+        <mat-radio-button class="example-radio-button" *ngFor="let opcao of opcoes" [value]="opcoes.indexOf(opcao)">
+            {{opcao}}
+        </mat-radio-button>
+      </mat-radio-group>
+
+      <div class="container-botao-padrao">
+        <button mat-raised-button class="botao" (click)="resolver()">Resolver</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<mat-card class="container-form mat-elevation-z8 redacoes">
+  <mat-card-header>
+    <mat-card-title>Redações</mat-card-title>
+    <mat-card-subtitle>Escolha um tema e envie sua redação para correção</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="example-container">
+      <mat-form-field class="input-padrao">
+        <input #tema matInput placeholder="Tema" type="text">
+      </mat-form-field>
+    </div>
+    <!-- <input #imageInput type="file" accept="image/jpg" (change)="enviarArquivo(imageInput)" title="Enviar">             > -->
+    <div class="container-botao-padrao">
+      <button mat-raised-button color="warn">Enviar</button>
+    </div>
+
+    <table mat-table [dataSource]="dataSource">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> Tema </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Nota </th>
+          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef> Redação </th>
+          <td mat-cell *matCellDef="let element"><a><mat-icon color="warn">done</mat-icon></a></td>
+        <!-- https://klarsys.github.io/angular-material-icons/ -->
+        </ng-container>
+        
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef> Correção </th>
+          <td mat-cell *matCellDef="let element"><a><mat-icon color="warn">done_all</mat-icon></a></td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="container-form mat-elevation-z8 videoaulas">
+  <mat-card-header>
+    <mat-card-title>Videoaulas</mat-card-title>
+    <mat-card-subtitle>Assista as aulas, acumule conhecimento e evolua</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>???</p>
+  </mat-card-content>
+</mat-card>

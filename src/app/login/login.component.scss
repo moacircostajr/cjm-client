@@ -1,0 +1,15 @@
+@import "../app.component";
+
+.espaco-topo {
+    height: 10%;
+}
+
+.espacamento {
+    padding: 2em;
+}
+
+@media(max-width: 575.98px) {
+    .espacamento {
+        padding: 0;
+    }
+}

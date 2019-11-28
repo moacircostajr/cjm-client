@@ -1,0 +1,202 @@
+<a (click)="rolarP('menu')"><img class="logomarca-flutuante" src="../../assets/img/logo tipo final.png" alt="Logomarca"></a>
+<div class="table-responsive-lg">
+  <table class="table menu" id="menu">
+    <tr>
+      <td><a (click)="rolarP('cursos')">Cursos</a></td>
+      <td class="desliga"><a (click)="rolarP('ranking')">Ranking</a></td>
+      <td class="desliga"><a (click)="rolarP('resultados')">Resultados</a></td>
+      <td><a (click)="rolarP('contato')">Contato</a></td>
+      <td class="desliga"><a (click)="rolarP('concursos')">Concursos</a></td>
+      <td><a href="https://drive.google.com/open?id=1dmHzVZ9LflukY-EGy_KPFogysy87UWBM">Material de Apoio</a></td>
+      <td><a class="a-aluno" routerLink="/login">Área do Aluno</a></td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <img id="img_princ" src="../../assets/img/header.jpg" alt="Início da jornada rumo ao sucesso na vida" class="cabecalho">
+</div>
+
+<div class="separacao"></div>
+
+<div class="centralizado">
+    <a class="inscricao" routerLink="/matricula">Inscrição</a>
+</div>
+
+<div class="separacao"></div>
+<div class="titulo" id="cursos"><h1>Cursos</h1></div>
+<div class="separacao"></div>
+<mat-grid-list cols="3" rowHeight="3:1">
+  <mat-grid-tile>
+      <p class="titulo-cursos"><strong>Curso Básico</strong></p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <p class="titulo-cursos"><strong>Curso Intermediário</strong></p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <p class="titulo-cursos"><strong>Curso Avançado</strong></p>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="3" rowHeight="3:1.3">
+  <mat-grid-tile>
+      <img src="../../assets/img/iconeiniciante.png" alt="Curso Básico" class="img-ap-cur">
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <img src="../../assets/img/iconeintermediario.png" alt="Curso Intermediário" class="img-ap-cur">
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <img src="../../assets/img/iconeavancado.png" alt="Curso Avançado" class="img-ap-cur">
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="3" rowHeight="3:1.9" class="desliga">
+  <mat-grid-tile>
+    <p class="texto-explicativo">Curso de português, a partir do zero, indicado para quem está iniciando os estudos.</p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <p class="texto-explicativo">Curso de português, de nível intermediário, indicado para quem ja conhece a matéria, mas tem dificuldade na resolução de provas.</p>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <p class="texto-explicativo">Curso de português, de nível avançado, indicado para quem deseja obter alta performance em resolução de provas, nos concursos de alto nível.</p>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div class="separacao desliga"></div>
+<div class="titulo desliga" id="ranking"><h1>Ranking</h1></div>
+
+<mat-grid-list cols="1" rowHeight="1:0.6" class="desliga">
+  <mat-grid-tile>
+    <img src="../../assets/img/ranking.jpg" alt="Ranking das maiores pontuações em resolução de exercícios" class="ranking">
+  </mat-grid-tile>
+</mat-grid-list>
+<div class="desliga">
+  <div class="titulo desliga" id="resultados"><h1>Resultados</h1></div>
+  <div class="separacao"></div>
+  <mat-grid-list cols="3" rowHeight="3:1">
+    <mat-grid-tile>
+      <img src="../../assets/img/foto.png" alt="Curso Básico" class="img-ap-cur">
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <img src="../../assets/img/foto.png" alt="Curso Intermediário" class="img-ap-cur">
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <img src="../../assets/img/foto.png" alt="Curso Avançado" class="img-ap-cur">
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="3" rowHeight="3:2">
+    <mat-grid-tile>
+      <table>
+        <tr>
+          <td>
+            <p class="texto-resultados">FRANCISCA MARIA DA SILVA</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="texto-resultados">1ª colocada</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="texto-resultados">Concurso para Agente Penitenciário no Ceará</p>
+          </td>
+        </tr>
+      </table>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <table>
+        <tr>
+          <td>
+            <p class="texto-resultados">FRANCISCA MARIA DA SILVA</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="texto-resultados">1ª colocada</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="texto-resultados">Concurso para Agente Penitenciário no Ceará</p>
+          </td>
+        </tr>
+      </table>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <table>
+        <tr>
+          <td>
+            <p class="texto-resultados">FRANCISCA MARIA DA SILVA</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="texto-resultados">1ª colocada</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="texto-resultados">Concurso para Agente Penitenciário no Ceará</p>
+          </td>
+        </tr>
+      </table>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<!-- <div class="visitas">2000 VISITAS</div> -->
+<!--<div class="painel-apresentacao">
+  <p class="texto-apresentacao">Aprenda português, garanta seu diferencial e alcance sua aprovação em concursos públicos e vestibulares.</p>
+  <p class="texto-apresentacao">Exposição da matéria de forma simplificada através de organogramas e exercícios de fixação, com ciclos de revisão das aulas e estudo comparativo dos sintagmas.</p>
+</div>-->
+<div class="separacao"></div>
+<div class="separacao"></div>
+<div class="titulo" id="contato"><h1>Contato</h1></div>
+
+
+
+<mat-grid-list cols="1" rowHeight="1:0.7">
+  <mat-grid-tile>
+    <img id="img_sec" class="imagem" src="../../assets/img/finalizado-1.jpg" alt="Contato"/>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div class="separacao"></div>
+<div class="titulo desliga" id="concursos"><h1>Concursos</h1></div>
+
+<div class="table-responsive-lg desliga">
+  <table class="table tabl-concursos">
+    <tr>
+      <td><strong>Concurso</strong></td>
+      <td><strong>Cargo</strong></td>
+      <td><strong>Salário</strong></td>
+      <td><strong>Status</strong></td>
+    </tr>
+    <tr>
+      <td>Polícia Militar do Ceará</td>
+      <td>Soldado</td>
+      <td>R$ 3.100,00</td>
+      <td>Autorizado</td>
+    </tr>
+  </table>
+</div>
+
+<div class="table-responsive-lg">
+  <table class="table rodape">
+    <tr>
+      <td style="width: 20%">
+        <img src="../../assets/img/logo tipo final.png" alt="Logomarca" style="width: 70%">
+      </td>
+      <td>
+        <p>Copyright©</p>
+        <p>Todos os direitos reservados</p>
+        <p>2019</p>
+      </td>
+      <td>
+          <p>Desenvolvido por Moacir Costa<br>
+          moacircostajr@gmail.com</p>
+          <p>Design gráfico por Alison Sousa<br>
+          alisonsousa99807@gmail.com</p>
+      </td>
+    </tr>
+  </table>
+</div>
+

@@ -1,0 +1,65 @@
+<app-barra-navegacao></app-barra-navegacao>
+<mat-card class="container-form mat-elevation-z8">
+  <mat-card-header>
+    <mat-card-title>Inscrição</mat-card-title>
+    <mat-card-subtitle>Formulário de inscrição</mat-card-subtitle>
+  </mat-card-header>
+  <div class="example-container">
+    <mat-form-field class="input-padrao">
+      <input matInput placeholder="Nome" type="text" #nome required [formControl]="ctrlInputs">
+      <mat-error *ngIf="ctrlInputs.invalid">{{obterMensagemErro()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="input-padrao">
+      <input matInput placeholder="Email" type="email" #email required [formControl]="ctrlEmail">
+      <mat-error *ngIf="ctrlEmail.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="input-padrao">
+      <input matInput placeholder="Endereço" type="text" #endereco required [formControl]="ctrlInputs">
+      <mat-error *ngIf="ctrlInputs.invalid">{{obterMensagemErro()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="input-padrao">
+      <input matInput placeholder="Bairro" type="text" #bairro required [formControl]="ctrlInputs">
+      <mat-error *ngIf="ctrlInputs.invalid">{{obterMensagemErro()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="input-padrao">
+      <input matInput placeholder="Cidade" type="text" #cidade required [formControl]="ctrlInputs">
+      <mat-error *ngIf="ctrlInputs.invalid">{{obterMensagemErro()}}</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="input-padrao">
+      <input matInput placeholder="Estado" type="text" #estado minlength="2" maxlength="2"
+      (input)="estado.value=$event.target.value.toUpperCase()" required [formControl]="ctrlInputs">
+      <mat-error *ngIf="ctrlInputs.invalid">{{obterMensagemErro()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="input-padrao">
+      <input matInput placeholder="Telefone" type="tel" #telefone required [formControl]="ctrlInputs">
+      <mat-error *ngIf="ctrlInputs.invalid">{{obterMensagemErro()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="input-padrao">
+      <input matInput placeholder="Senha" type="password" #senha required>
+      <mat-error *ngIf="ctrlInputs.invalid">{{obterMensagemErro()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="input-padrao">
+      <input matInput placeholder="Confirmação da senha" type="password" required>
+    </mat-form-field>
+  </div>
+  <div class="container-botao-padrao">
+    <button mat-raised-button class="botao" (click)="registrar(
+    nome.value,
+    email.value,
+    endereco.value,
+    bairro.value,
+    cidade.value,
+    estado.value,
+    telefone.value,
+    senha.value
+    )">Registrar</button>
+  </div>
+</mat-card>

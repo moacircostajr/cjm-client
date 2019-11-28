@@ -1,0 +1,89 @@
+@import "../app.component";
+
+$tamanhoFonte: 12pt;
+
+.espaco-topo {
+  height: 6%;
+}
+
+table {
+    width: 100%;
+    margin-top: 2em;
+  }
+
+.redacoes, .videoaulas, .desempenho {
+  display: none;
+}
+
+ul, il {
+  list-style-type: none;
+}
+
+.resultado-busca {
+  text-align: center;
+}
+
+.botoes-exercicios {
+  display: inline;
+  margin-right: 1em;
+}
+
+.enunciado {
+  // margin: 1em 1em;
+  font-size: $tamanhoFonte;
+  // text-indent: 3em;
+}
+
+.img-enunciado {
+  max-width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+ .opcoes {
+  // margin: 1em 1em;
+  font-size: $tamanhoFonte;
+}
+
+.pontuacao {
+  text-align: right;
+  font-size: $tamanhoFonte;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 200%;
+}
+
+.example-radio-button {
+  // margin: 5px;
+  font-size: $tamanhoFonte;
+}
+
+.menu {
+  position:absolute;
+  right: 30px;
+  margin: 10px 0;
+}
+
+mat-card-header {
+  padding-top: 3em;
+  padding-left: 1.5em;
+  padding-right: 3em;
+}
+
+mat-card-content {
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.apresenta {
+  display: block;
+}
+
+.oculta {
+  display: none;
+}

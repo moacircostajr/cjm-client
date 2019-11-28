@@ -1,0 +1,588 @@
+@import "~src/paleta";
+@import url('https://fonts.googleapis.com/css?family=Charm|Dancing+Script|Satisfy');
+@import "../app.component";
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  $tamanhoFonteTexto: 7pt; 
+  $tamanhoFonteTitulo: 8pt;
+  $tamanhoFonteRodape: 4pt; 
+  .menu {
+    font-size: $tamanhoFonteTexto;
+    background-color: unset;
+    color: $terciaria;
+    position: absolute;
+    padding: 1em 0.5em 0 0;
+    right: 0;
+    text-align: center;
+    border-bottom: 3px solid $terciaria;
+    a {
+      padding: 0 1em;
+    }
+  }
+
+  .logomarca-flutuante {
+    width: 20%; 
+    position:fixed; 
+    left: 2em; 
+    top: 3em; 
+    z-index:1;
+  }
+    
+  a {
+    text-decoration: none;
+    color: $terciaria;
+  }
+
+  a:hover {
+    background-color: $quaternaria;
+    color: $texto;
+    cursor: pointer;
+  }
+
+  a:active {
+    background-color: black;
+    color: $terciaria;
+  }
+
+  .a-aluno {
+    color: $primaria;
+  }
+  
+  .inscricao {
+    text-align: center;
+    padding: 2% 12%;
+    font-size: $tamanhoFonteTexto;
+    border-radius: 1em;
+    background-color: $primaria;
+    color: $texto;
+  }
+  
+  .separacao {
+    height: 1em;
+  }
+  .separacao-triplicada {
+    height: 3em;
+  }
+  
+  .img-ap-cur {
+    width: 33%;
+  }
+  
+  .texto-explicativo {
+    text-align: center;
+    padding: 1em 2em;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .texto-resultados {
+    text-align: center;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .cabecalho {
+    width: 100%;
+  }
+  
+  .titulo {
+    margin-left: 3em;
+    font-size: $tamanhoFonteTitulo;
+  }
+
+  .titulo-cursos {
+    font-size: $tamanhoFonteTitulo;
+  }
+
+  .imagem {
+    width: 90%;
+    border-radius: 1em;
+  }
+  
+  .tabl-concursos {
+    width: 100%;
+    text-align: center;
+    padding: 3em 0;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .rodape{
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: $texto;
+    font-size: $tamanhoFonteRodape;
+  }
+
+  .desliga {
+    display: none;
+  }
+} 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  $tamanhoFonteTexto: 9pt; 
+  $tamanhoFonteTitulo: 9pt; 
+  $tamanhoFonteRodape: 4pt;
+  .menu {
+    font-size: $tamanhoFonteTexto;
+    background-color: unset;
+    color: $terciaria;
+    position: absolute;
+    padding: 1em 0.5em 0 0;
+    right: 0;
+    text-align: center;
+    border-bottom: 3px solid $terciaria;
+    a {
+      padding: 0 1em;
+    }
+  }
+
+  .logomarca-flutuante {
+    width: 20%; 
+    position:fixed; 
+    left: 4em; 
+    top: 5em; 
+    z-index:1;
+  }
+    
+  a {
+    text-decoration: none;
+    color: $terciaria;
+  }
+
+  a:hover {
+    background-color: $quaternaria;
+    color: $texto;
+    cursor: pointer;
+  }
+
+  a:active {
+    background-color: black;
+    color: white;
+  }
+
+  .a-aluno {
+    color: $primaria;
+  }
+  
+  .inscricao {
+    text-align: center;
+    padding: 2% 12%;
+    font-size: $tamanhoFonteTexto;
+    border-radius: 1em;
+    background-color: $primaria;
+    color: $texto;
+  }
+  
+  .separacao {
+    height: 1em;
+  }
+  .separacao-triplicada {
+    height: 3em;
+  }
+  
+  .img-ap-cur {
+    width: 33%;
+  }
+  
+  .texto-explicativo {
+    text-align: center;
+    padding: 1em 2em;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .texto-resultados {
+    text-align: center;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .cabecalho {
+    width: 100%;
+  }
+  
+  .titulo {
+    margin-left: 3em;
+    font-size: $tamanhoFonteTitulo;
+  }
+  
+  .titulo-cursos {
+    font-size: $tamanhoFonteTitulo;
+  }
+
+  .imagem {
+    width: 90%;
+    border-radius: 1em;
+  }
+
+  .tabl-concursos {
+    width: 100%;
+    text-align: center;
+    padding: 3em 0;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .rodape{
+    text-align: left;
+    color: grey;
+    width: 100%;
+    background-color: black;
+    color: $texto;
+    font-size: $tamanhoFonteRodape;
+  }
+
+  .desliga {
+    display: none;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  $tamanhoFonteTexto: 11pt; 
+  $tamanhoFonteTitulo: 13pt; 
+  $tamanhoFonteRodape: 6pt;
+  .menu {
+    font-size: $tamanhoFonteTexto;
+    background-color: unset;
+    color: $terciaria;
+    position: absolute;
+    padding: 1em 0.5em 0 0;
+    right: 0;
+    text-align: center;
+    border-bottom: 3px solid $terciaria;
+    a {
+      padding: 0 1em;
+    }
+  }
+  
+  .logomarca-flutuante {
+    width: 20%; 
+    position:fixed; 
+    left: 5em; 
+    top: 5em; 
+    z-index:1;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $terciaria;
+  }
+
+  a:hover {
+    background-color: $quaternaria;
+    color: $texto;
+    cursor: pointer;
+  }
+
+  a:active {
+    background-color: black;
+    color: white;
+  }
+
+  .a-aluno {
+    color: $primaria;
+  }
+
+  .inscricao {
+    text-align: center;
+    padding: 2% 12%;
+    font-size: $tamanhoFonteTexto;
+    border-radius: 1em;
+    background-color: $primaria;
+    color: $texto;
+  }
+  
+  .separacao {
+    height: 1em;
+  }
+  .separacao-triplicada {
+    height: 3em;
+  }
+  
+  .img-ap-cur {
+    width: 33%;
+  }
+  
+  .texto-explicativo {
+    text-align: center;
+    padding: 1em 2em;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .texto-resultados {
+    text-align: center;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .cabecalho {
+    width: 100%;
+  }
+  
+  .titulo {
+    margin-left: 3em;
+    font-size: $tamanhoFonteTitulo;
+  }
+
+  .titulo-cursos {
+    font-size: $tamanhoFonteTitulo;
+  }
+
+  
+  .tabl-concursos {
+    width: 100%;
+    text-align: center;
+    padding: 3em 0;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .rodape{
+    text-align: left;
+    color: grey;
+    width: 100%;
+    background-color: black;
+    font-size: $tamanhoFonteRodape;
+  }
+
+  .imagem {
+    width: 90%;
+    border-radius: 1em;
+  }
+
+  .desliga {
+    display: none;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+  $tamanhoFonteTexto: 12pt; 
+  $tamanhoFonteTitulo: 14pt; 
+  $tamanhoFonteRodape: 8pt;
+  .menu {
+    font-size: $tamanhoFonteTexto;
+    background-color: unset;
+    color: $terciaria;
+    position: absolute;
+    padding: 1em 0.5em 0 0;
+    right: 0;
+    text-align: center;
+    border-bottom: 3px solid $terciaria;
+    a {
+      padding: 0 1em;
+    }
+  }
+  
+  .logomarca-flutuante {
+    width: 25%; 
+    position:fixed; 
+    left: 5em; 
+    top: 5em; 
+    z-index:1;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $terciaria;
+  }
+
+  a:hover {
+    background-color: $quaternaria;
+    color: $texto;
+    cursor: pointer;
+  }
+
+  a:active {
+    background-color: black;
+    color: white;
+  }
+
+  .a-aluno {
+    color: $primaria;
+  }
+  
+  .inscricao {
+    background-color: $primaria;
+    color: $texto;
+    text-align: center;
+    padding: 2% 12%;
+    font-size: $tamanhoFonteTexto;
+    border-radius: 1em;
+  }
+  
+  .separacao {
+    height: 1em;
+  }
+  .separacao-triplicada {
+    height: 3em;
+  }
+  
+  .img-ap-cur {
+    width: 33%;
+  }
+  
+  .texto-explicativo {
+    text-align: center;
+    padding: 1em 2em;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .texto-resultados {
+    text-align: center;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .cabecalho {
+    width: 100%;
+  }
+  
+  .titulo {
+    margin-left: 3em;
+    font-size: $tamanhoFonteTitulo;
+  }
+
+  .titulo-cursos {
+    font-size: $tamanhoFonteTitulo;
+  }
+  
+  .tabl-concursos {
+    width: 100%;
+    text-align: center;
+    padding: 3em 0;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .rodape{
+    text-align: left;
+    color: grey;
+    width: 100%;
+    background-color: black;
+    font-size: $tamanhoFonteRodape;
+  }
+
+  .imagem {
+    width: 90%;
+    border-radius: 1em;
+  }
+
+  .desliga {
+    display: none;
+  }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+  $tamanhoFonteTexto: 14pt; 
+  $tamanhoFonteTitulo: 16pt; 
+  $tamanhoFonteRodape: 10pt;
+  .menu {
+    font-size: $tamanhoFonteTexto;
+    background-color: unset;
+    color: $terciaria;
+    position: absolute;
+    padding: 1em 0.5em 0 0;
+    right: 0;
+    text-align: center;
+    border-bottom: 3px solid $terciaria;
+    a {
+      padding: 0 1em;
+    }
+  }
+
+  .logomarca-flutuante {
+    width: 27%; 
+    position:fixed; 
+    left: 5em; 
+    top: 5em; 
+    z-index:1;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $terciaria;
+  }
+
+  a:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
+  a:active {
+    background-color: black;
+    color: white;
+  }
+
+  .a-aluno {
+    color: $primaria;
+  }
+  
+  .inscricao {
+    background-color: $primaria;
+    color: $texto;
+    text-align: center;
+    padding: 2% 12%;
+    font-size: $tamanhoFonteTexto;
+    border-radius: 1em;
+  }
+  
+  .separacao {
+    height: 1em;
+  }
+  .separacao-triplicada {
+    height: 3em;
+  }
+  
+  .img-ap-cur {
+    width: 33%;
+
+  }
+  
+  .texto-explicativo {
+    text-align: center;
+    padding: 1em 2em;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .texto-resultados {
+    text-align: center;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .cabecalho {
+    width: 100%;
+  }
+  
+  .titulo {
+    margin-left: 3em;
+    font-size: $tamanhoFonteTitulo;
+  }
+
+  .titulo-cursos {
+    font-size: $tamanhoFonteTitulo;
+  }
+  
+  .tabl-concursos {
+    width: 100%;
+    text-align: center;
+    padding: 3em 0;
+    font-size: $tamanhoFonteTexto;
+  }
+  
+  .imagem {
+    width: 90%;
+    border-radius: 1em;
+  }
+
+  .rodape{
+    text-align: left;
+    color: grey;
+    width: 100%;
+    background-color: black;
+    font-size: $tamanhoFonteRodape;
+  }
+
+  .desliga {
+    display: none;
+  }
+
+}
+

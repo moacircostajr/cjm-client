@@ -1,0 +1,18 @@
+<div class="espaco-topo"></div>
+<mat-card class="container-form-login mat-elevation-z8">
+  <mat-card-header class="espacamento">
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-subtitle>Acessar área do aluno</mat-card-subtitle>
+  </mat-card-header>
+  <div class="example-container espacamento">
+    <mat-form-field>
+      <input #login matInput placeholder="Email" type="text">
+    </mat-form-field>
+    <mat-form-field>
+      <input #senha matInput placeholder="Senha" type="password">
+    </mat-form-field>
+  </div>
+  <div class="container-botao-padrao">
+    <button class="botao" mat-raised-button (click)="logar(login.value, senha.value)">Acessar</button>
+  </div>
+</mat-card>

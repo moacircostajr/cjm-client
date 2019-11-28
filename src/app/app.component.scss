@@ -1,0 +1,63 @@
+@import "../paleta";
+
+.centralizado {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.input-padrao {
+  width: 100%;
+}
+
+.container-botao-padrao {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-form {
+  width: 85%;
+  margin: 2em auto;
+  color: $primaria;
+}
+
+.container-form-login {
+  width: 50%;
+  margin: 2em auto;
+  color: $primaria;
+}
+
+/* .container-menu {
+  
+}
+ */
+.margem-topo {
+  margin-top: 5em;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 85%;
+}
+
+.botao {
+  background-color: $botao;
+  color: $texto;
+}
+
+.icone {
+  color: $botao;
+}
+
+/*
+.menu {
+  background-color: unset;
+  padding: 1em;
+  border-style: unset;
+  border-radius: 15px;
+}
+*/
