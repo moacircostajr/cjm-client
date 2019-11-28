@@ -55,5 +55,5 @@ Este projeto está licenciado sob os termos da GNU General Public License v3.0 -
 
 ## Status do projeto
 
-* É necessário corrigir um bug na alteração dos exercícios;
+* É necessário fazer a validação dos formulários de inserção de informações;
 * A ferramenta de testes e sincronização TRAVIS está desconfigurada.
