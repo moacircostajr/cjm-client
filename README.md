@@ -6,7 +6,7 @@ Projeto desenvolvido em Angular 7, consistindo numa interface com o usuário fin
 
 Estas instruções lhe permitirão obter uma cópia do projeto e executá-lo na sua máquina local para desenvolvimento e testes. Veja as notas de compilação para saber como compilar o projeto.
 
-### Prerequisites
+### Pré-requisitos
 
 Por se tratar de um cliente, este projeto consome os serviços de uma API. No entanto, para testar e desenvolver esse projeto é possível que a API seja emulada pelo JSON SERVER, um programa que pode ser instalado na sua máquina através no comando `npm install json-server -g`. O comando NPM, por sua vez, pode ser instalado através do comando `sudo apt install nodejs` (no GNU/LINUX distribuição Ubuntu, mas independe de sistema operacional).
 
@@ -25,7 +25,7 @@ Execute `ng serve --open` para iniciar o servidor de desenvolvimento. Acesse o e
 
 Para parar a execução do servidor de desenvolvimento, pressione `Ctrl + C`, no terminal de comando.
 
-## Ferramenta de desenvolvimento
+## Ferramentas de desenvolvimento
 
 Com o servidor de desenvolvimento parado, execute `ng generate component component-name` para criar um novo componente. Você também pode usar `ng generate appShell|application|class|directive|enum|guard|interface|library|module|pipe|service|serviceWorker|universal`.
 
@@ -49,8 +49,11 @@ Este projeto está licenciado sob os termos da GNU General Public License v3.0 -
 
 ## Agradecimentos
 
-* Jesus Cristo, que me deu coragem e força pra chegar até aqui, ao meu irmão Claudio Costa que me ensinou os caminhos que eu deveria trilhar para chegar neste ponto, e ao Tenente Moura, que acreditou no meu potencial e me encorajou a continuar o desenvolvimento deste projeto.
+* A Jesus Cristo, que me deu coragem e força pra chegar até aqui;
+* Ao meu irmão Claudio Costa, que me ensinou os caminhos que eu deveria trilhar para chegar neste nível de conhecimento em programação;
+* Ao Tenente Moura, que acreditou no meu potencial e me encorajou a continuar o desenvolvimento deste projeto.
 
 ## Status do projeto
 
-Na fase atual deste projeto é necessário corrigir um bug na alteração dos exercícios.
+* É necessário corrigir um bug na alteração dos exercícios;
+* A ferramenta de testes e sincronização TRAVIS está desconfigurada.
