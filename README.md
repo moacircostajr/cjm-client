@@ -8,7 +8,7 @@ Estas instruções lhe permitirão obter uma cópia do projeto e executá-lo na 
 
 ### Pré-requisitos
 
-O framework Ionic deve ser instalado globalmente através do comando `npm install -g @angular/cli@7`.
+O framework Angular deve ser instalado globalmente através do comando `npm install -g @angular/cli@7`.
 
 Por se tratar de um cliente, este projeto consome os serviços de uma API. No entanto, para testar e desenvolver esse projeto é possível que a API seja emulada pelo JSON SERVER, um programa que pode ser instalado na sua máquina através no comando `npm install json-server -g`. O comando NPM, por sua vez, pode ser instalado através do comando `sudo apt install nodejs` (no GNU/LINUX distribuição Ubuntu, mas independe de sistema operacional).
 
